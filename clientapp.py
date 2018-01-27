@@ -91,6 +91,7 @@ class Main(QWidget):
         self.height = 60
         self.trycount = 0
         self.setGeometry(300, 150, 400, 600)
+        self.setWindowTitle('Welcome')
         self.nameline = QLineEdit()
         self.passwordline = QLineEdit()
         self.nameline.setPlaceholderText("Username...")
@@ -153,6 +154,7 @@ class Main(QWidget):
 
     def startserver(self):
         self.setGeometry(300, 150, 300, 450)
+        self.setWindowTitle('Chat')
         clearLayout(self.lay)
         self.list = QListWidget()
         self.list.setStyleSheet("QListWidget{border: none;border-radius:3px;background-color:#EEE}")
@@ -176,6 +178,7 @@ class Main(QWidget):
 
     def typeracer(self):
         self.setGeometry(300, 150, 400, 650)
+        self.setWindowTitle('Typeracer')
         if hasattr(self, 'lay'):
             clearLayout(self.lay)
         else:
