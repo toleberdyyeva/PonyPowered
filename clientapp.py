@@ -143,7 +143,7 @@ class Main(QWidget):
             sendlist = [sender.text(), self.name, self.password]
             req = pickle.dumps(sendlist)
             self.socket.send(req)
-            response = self.socket.recv(1024)
+            response = self.socket.recv(2048)
             response = pickle.loads(response)
             if response == 'okay':
                 self.startserver()
