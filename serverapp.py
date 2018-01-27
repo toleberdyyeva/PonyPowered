@@ -113,3 +113,26 @@ class User(QWidget):
             self.addstatus.setText("<font color='blue'>User added</font>")
         else:
             self.addstatus.setText("<font color='red'>Check password</font>")
+
+
+class ShowCurrentIP(QWidget):
+
+    def __init__(self, parent=None):
+        super(QWidget, self).__init__(parent)
+        self.initUI()
+    
+    def initUI(self):
+        box_layout = QVBoxLayout()
+        self.ip_label = QLabel('')
+        show_ip = QPushButton('Show IP')
+
+        box_layout.addWidget(self.ip_label)
+        box_layout.addWidget(show_ip)
+        self.setLayout(box_layout)
+
+        show_ip.clicked.connect(self.get_current_ip)
+    
+    def get_current_ip(self):
+        import socket
+        ip = (([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")] or [[(s.connect(("8.8.8.8", 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) + ["no IP found"])[0]
+        self.ip_label.setText(ip)
