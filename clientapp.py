@@ -107,7 +107,7 @@ class Main(QWidget):
 
         self.lay.addWidget(self.nameline)
         self.lay.addWidget(self.passwordline)
-        # self.lay.addWidget(self.status)
+        self.lay.addWidget(self.status)
         self.lay.setAlignment(self.nameline, Qt.AlignBottom)
 
         self.lay.addLayout(self.Hbox)
