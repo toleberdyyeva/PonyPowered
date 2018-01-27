@@ -153,13 +153,15 @@ class Main(QWidget):
                 self.status.setText('Incorrect login or password')
 
     def startserver(self):
-        self.setGeometry(300, 150, 300, 450)
+        self.setGeometry(300, 150, 500, 600)
         self.setWindowTitle('Chat')
         clearLayout(self.lay)
+        online = QLabel('Online:')
+        messages = QLabel('Messages:')
         self.list = QListWidget()
         self.list.setStyleSheet("QListWidget{border: none;border-radius:3px;background-color:#EEE}")
         self.active = QListWidget()
-        self.active.setStyleSheet("QListWidget{border: none;border-radius:3px;background-color:#EEE}")
+        self.active.setStyleSheet("QListWidget{border: none;border-radius:3px;background-color:#EEE;height:40}")
         self.line = QLineEdit()
         self.mesLine = QHBoxLayout()
         self.send = QPushButton('Send')
@@ -172,7 +174,9 @@ class Main(QWidget):
         self.startmode = QPushButton('Start typing')
         self.startmode.hide()
         self.startmode.clicked.connect(self.typeracer)
+        self.lay.addWidget(online)
         self.lay.addWidget(self.active)
+        self.lay.addWidget(messages)
         self.lay.addWidget(self.list)
         self.lay.addLayout(self.mesLine)
 
