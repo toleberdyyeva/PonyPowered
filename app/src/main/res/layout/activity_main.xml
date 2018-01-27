@@ -11,10 +11,6 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bignerdranch.android.ponychat.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"/>
 
     <Button
         android:text="Create"
@@ -23,7 +19,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="128dp"
-        android:id="@+id/create_btn"/>
+        android:id="@+id/create_btn"
+        android:onClick="turnOnOffWiFi"/>
 
     <Button
         android:text="Join"

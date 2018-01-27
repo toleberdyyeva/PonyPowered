@@ -3,6 +3,15 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\useer\AppData\Local\Android\sdk\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_aad9323763192102e3aa4ec6f04ec3e7d8bd5222\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -21,6 +30,15 @@
     </item>
     <item
         is-multidex="true"
+        jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support.constraint\constraint-layout\1.0.2\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support.constraint-constraint-layout-1.0.2_5716510c3b888796f0f209838db67e788df1dc95\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\support-media-compat\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
@@ -34,8 +52,17 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="c10d8acfcf150e0f58b503b32840b60e34c5978d">
+        sha1="3bd3fb54e97f74854adee509d452faba169cdc15">
         <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_de8a3b0e07473825fd8438af10a244d0f02c6545\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\21.0.3\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4b8945fc23a7461c6fdde15753456d64b0a9358b">
+        <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-recyclerview-v7-21.0.3_7ffa9b835ce72c93d58d4d7f996db9080cb6eb7f\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -54,6 +81,24 @@
         revision="25.0.2"
         sha1="518768f3200963fbfec652f498da2c9d39245234">
         <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-core-utils-25.3.0_96d1f54bfeddb709ea430f41ad5748ad3eb80872\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
+        <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.3.0_90102cdd2b1edc12f24cc16e7ec2155b9310e8f0\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.3.0_c7c710cc10e3c8722b2edb73f749c0de612afe0b\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -84,30 +129,12 @@
     </item>
     <item
         is-multidex="true"
-        jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\25.3.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="70f23cb87278f89aa51e6f57e8f0fd5266572d95">
-        <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-25.3.0_90102cdd2b1edc12f24cc16e7ec2155b9310e8f0\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\support-fragment\25.3.0\jars\classes.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="93c1199fcb0a34b980e6fff8350daff62e696ec2">
         <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-fragment-25.3.0_3ede835b54098c70f3d566a3c59b5f8b25c17d81\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\exploded-aar\com.android.support\support-v4\25.3.0\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="C:\Users\useer\Desktop\PonyChat\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-v4-25.3.0_c7c710cc10e3c8722b2edb73f749c0de612afe0b\classes.dex" />
     </item>
 
 </items>
