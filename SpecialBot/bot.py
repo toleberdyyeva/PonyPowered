@@ -14,6 +14,7 @@ bot = telebot.TeleBot(configs.token)
 # ANY TEXT HANDLER
 @bot.message_handler(content_types=["text"])
 def repeat_all_messages(message):
+    # res = " Hello, "
     bot.send_message(message.chat.id, message.text , parse_mode='HTML')
 
 
