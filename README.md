@@ -1,3 +1,2 @@
 # PonyPowered
-
-мы решили написать чат с игрой )))00))))
+## This branch for 8th tasks only see 'SpecialBot' folder
