@@ -1,9 +1,10 @@
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QListWidget, \
                             QPushButton, QLabel, QLineEdit, QListWidgetItem, \
-                            QTextEdit, QApplication
+                            QTextEdit, QApplication, QHBoxLayout
 import sys
 from PyQt5.QtMultimedia import QSound
-from PyQt5.QtGui import QFont
+from PyQt5.QtGui import QFont, QPalette, QBrush, QPixmap
+from PyQt5.QtCore import Qt
 from socket import socket
 import threading
 import pickle
@@ -78,16 +79,16 @@ class Main(QWidget):
         self.label.setAlignment(Qt.AlignCenter)
         self.hor = QHBoxLayout()
         # self.lay.setContentsMargins(-1,-1,-1,0)
-        
+
         self.Hbox = QHBoxLayout()
         # self.Hbox.addStretch(1)
-        
+
         # self.hor.setAlignment(Qt.AlignCenter)
         # self.lay.addLayout(self.hor)
         self.setStyleSheet('QWidget {background-color:white;border:none}')
         # self.label.setStyleSheet('Q {width:50px;height:auto}')
-        
-        self.height = 60 
+
+        self.height = 60
         self.trycount = 0
         self.setGeometry(300, 150, 400, 600)
         self.nameline = QLineEdit()
@@ -103,21 +104,21 @@ class Main(QWidget):
         self.lay.addStretch(1)
         self.lay.addWidget(self.label)
         self.lay.addStretch(1)
-        
+
         self.lay.addWidget(self.nameline)
         self.lay.addWidget(self.passwordline)
         # self.lay.addWidget(self.status)
         self.lay.setAlignment(self.nameline, Qt.AlignBottom)
-        
+
         self.lay.addLayout(self.Hbox)
         # self.lay.addStretch(1)
-        
-        
+
+
         self.signin = QPushButton('Sign in')
         self.signup = QPushButton('Sign up')
         self.signin.setStyleSheet('QPushButton {background-color:#4990E2;color:white;height:50;font-size:20px;border-radius:3px;font-family:Arial;}')
         self.signup.setStyleSheet('QPushButton {background-color:#7FDC89;color:white;height:50;font-size:20px;border-radius:3px;font-family:Arial;}')
-        
+
         self.signin.clicked.connect(self.authentification)
         self.signup.clicked.connect(self.authentification)
         self.Hbox.addWidget(self.signin)
@@ -126,7 +127,7 @@ class Main(QWidget):
         self.show()
 
     def authentification(self):
-        
+
         sender = self.sender()
         self.name = self.nameline.text()
         password = self.passwordline.text()
@@ -154,17 +155,24 @@ class Main(QWidget):
         self.setGeometry(300, 150, 300, 450)
         clearLayout(self.lay)
         self.list = QListWidget()
+        self.list.setStyleSheet("QListWidget{border: none;border-radius:3px;background-color:#EEE}")
         self.active = QListWidget()
+        self.active.setStyleSheet("QListWidget{border: none;border-radius:3px;background-color:#EEE}")
         self.line = QLineEdit()
+        self.mesLine = QHBoxLayout()
         self.send = QPushButton('Send')
+        self.send.setStyleSheet('background: #6d84b4;color: white;height:40;width:70px;border-radius:3px')
+        self.mesLine.addWidget(self.line)
+        self.mesLine.addWidget(self.send)
         self.send.clicked.connect(self.sendmessage)
+        self.line.setStyleSheet("QLineEdit{border: none;border-radius:3px;background-color:#EEE;height:40}")
+        self.line.setPlaceholderText("type something ...")
         self.startmode = QPushButton('Start typing')
         self.startmode.hide()
         self.startmode.clicked.connect(self.typeracer)
         self.lay.addWidget(self.active)
         self.lay.addWidget(self.list)
-        self.lay.addWidget(self.line)
-        self.lay.addWidget(self.send)
+        self.lay.addLayout(self.mesLine)
 
     def typeracer(self):
         self.setGeometry(300, 150, 400, 650)
@@ -279,6 +287,7 @@ class Main(QWidget):
                                 if i == self.name:
                                     i = 'You'
                                 a = QListWidgetItem(str(i))
+                                a.setTextAlignment(0x0004)
                                 self.active.addItem(a)
                     else:
                         print(mes)
@@ -319,3 +328,10 @@ class Main(QWidget):
 
     def closeEvent(self, event):
         os._exit(1)
+
+
+if __name__ == '__main__':
+    threading.Thread(target=accept_broadcast).start()
+    app = QApplication(sys.argv)
+    ex = Main()
+    sys.exit(app.exec_())
